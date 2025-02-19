@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f5f5">
+    <title>Products</title>
+    <link rel="icon" href="gymbro.jpg">
+    <link rel="stylesheet" href="lamrharigym.css">
+    <style>
+        /* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* Body and font setup */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3, p {
+    margin: 10px 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+/* Sexy Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #1a1a2e, #323334); /* Deep blue gradient */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid #393832; /* Gold bottom border */
+    border-radius: 10px;
+}
+
+/* Title Styling */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    color: #1f7940; /* Gold color */
+    transition: 0.3s ease-in-out;
+}
+
+.title span {
+    color: #b8b1af; /* Stylish contrast */
+}
+
+/* Navigation List */
+.list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.list li {
+    display: inline-block;
+}
+
+.list a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Hover Effects */
+.list a:hover {
+    background-color: #197d16;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Header Hover Animation */
+.header:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(gymbro.jpg);
+    background-size: cover;
+    height: 400px;
+
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* Navbar Image */
+.img-marquee {
+    width: 120px; /* Adjust size */
+    height: auto;
+    border-radius: 50%; /* Circular image */
+    border: 3px solid #fff;
+}
+
+/* Marquee Text Styling */
+.marquee {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.h1 {
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    box-shadow: #d4d4db;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.h2 {
+    font-size: 30px;
+    font-weight: lighter;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+/* Add hover effect to make it interactive */
+.navbar:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+
+/* Section titles */
+.mini-title {
+    font-size: 80px;
+    margin: 20px 0;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+}
+
+/* Product section layout */
+.product-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-items {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 210px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-placeholder img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-items h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.product-items .paragraph {
+    color: #666;
+    font-size: 14px;
+}
+
+.product-items a.btn {
+    background-color: black;
+    color: azure;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.product-items a.btn:hover {
+    background-color: #444;
+}
+
+.product-items button {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.product-items button:hover {
+    background-color: #ddd;
+}
+
+/* Contact form */
+.contact {
+    background-color: #333;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.contact button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #444;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* Product item button fixes */
+.product-items {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 210px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-items img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-items h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.product-items .paragraph {
+    color: #666;
+    font-size: 14px;
+}
+
+.product-items .btn {
+    background-color: black;
+    color: azure;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 15px; /* Add spacing from product details */
+    width: 100%;  /* Make the button full width of the product card */
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.product-items .btn:hover {
+    background-color: #444;
+}
+
+.product-items button {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%; 
+    transition: background-color 0.3s ease;
+}
+
+.product-items button:hover {
+    background-color: #ddd;
+}
+
+/* Ensure the product item card is responsive */
+@media (max-width: 768px) {
+    .product-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-items {
+        width: 90%; /* Make the product cards responsive */
+    }
+}
+/* Ensure images in product items are the same width and height */
+.product-items img {
+    width: 210px;   /* Set fixed width */
+    height: 210px;  /* Set fixed height */
+    object-fit: cover; /* Ensures images are cropped and fit into the box without stretching */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <header class="header">
+        <div>
+            <h1 class="title">Royal <span>Fitness</span></h1>
+        </div>
+        <div>
+            <ul class="list">
+                <li><a href="#" target="_parent">pre-workout</a></li>
+                <li><a href="#" target="_parent">materiel de musculalation</a></li>
+                <li><a href="site web.html" target="_parent">Acueil</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <navbar class="navbar">
+        <img src="salle.jpg" class="img-marquee" alt="">
+            <marquee class="marquee" direction="">
+                <h1 class="h1" style="color: rgb(153, 227, 175);">SHOP</h1>
+                <h2 class="h2" style="color: azure;">Équipez-vous pour votre meilleur entraînement !</h2>
+            </marquee>
+    </navbar>
+
+
+    <section class="section">
+        <div>
+            <h1 class="mini-title">Pre-workout</h1>
+        </div>
+        <div class="product-item">
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="trying.jpg" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">protein whey</h3>
+                <p class="paragraph" >Prix : 29,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                <button>29,09€</button>
+            </div>
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="trying2.jpg" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">whey isolate</h3>
+                <p class="paragraph" >Prix : 27,55 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                 <button>29,09€</button>
+            </div>
+
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="trying3.jpg" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">drink power</h3>
+                <p class="paragraph" >Prix : 29,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                 <button>29,09€</button>
+            </div>
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="trying4.jpg" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Gold standard</h3>
+                <p class="paragraph" >Prix : 40,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                 <button>29,09€</button>
+            </div>
+
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="trying5.jpg" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">serious MASS</h3>
+                <p class="paragraph" >Prix : 22,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                 <button>29,09€</button>
+            </div>
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="PRODUIT.3.jpg" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Pink whey</h3>
+                <p class="paragraph" >Prix : 33,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                <button>29,09€</button>
+            </div>
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="PRODUIT.2.jpg" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Black standard</h3>
+                <p class="paragraph" >Prix : 33,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                <button>29,09€</button>
+            </div>
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="PRODUIT.1.jpg" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Blue whey</h3>
+                <p class="paragraph" >Prix : 33,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                <button>29,09€</button>
+            </div>
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="PRODUIT.4.jpg" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">protein whale</h3>
+                <p class="paragraph" >Prix : 33,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                <button>29,09€</button>
+            </div>
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="produit.5.avif" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Supplement</h3>
+                <p class="paragraph" >Prix : 33,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                <button>29,09€</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div>
+            <h1 class="mini-title">Materiel de musculalation</h1>
+        </div>
+        <div class="product-item">
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="bar.1.jpg" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">protein whale</h3>
+                <p class="paragraph" >Prix : 29,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                <button>29,09€</button>
+            </div>
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="bar.2.jpg" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">protein whale</h3>
+                <p class="paragraph" >Prix : 27,55 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                <button>29,09€</button>
+            </div>
+
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="bar.3.jpg" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">protein whale</h3>
+                <p class="paragraph" >Prix : 29,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                <button>29,09€</button>
+            </div>
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="bar.4.jpg" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">protein whale</h3>
+                <p class="paragraph" >Prix : 40,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                <button>29,09€</button>
+            </div>
+
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="bar.6.jpg" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">protein whale</h3>
+                <p class="paragraph" >Prix : 22,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                <button>29,09€</button>
+            </div>
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="heu01866_principale_f_300x.avif" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">protein whale</h3>
+                <p class="paragraph" >Prix : 33,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                <button>29,09€</button>
+            </div>
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="heu07154_selle_f_300x.avif".jpg" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">protein whale</h3>
+                <p class="paragraph" >Prix : 33,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                <button>29,09€</button>
+            </div>
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="heu13252_principale_f_300x.avif" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">protein whale</h3>
+                <p class="paragraph" >Prix : 33,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                <button>29,09€</button>
+            </div>
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="heu14687_principale_f_300x.avif" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">protein whale</h3>
+                <p class="paragraph" >Prix : 33,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                <button>29,09€</button>
+            </div>
+
+            <div class="product-items">
+                <div class="image-placeholder">
+                <img src="moo15035_principale_f_7b724e1b-ea54-403a-a7da-ca1a6995e7ea_300x.avif" alt="#" width="210px" height="200px"></div>
+                <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">protein whale</h3>
+                <p class="paragraph" >Prix : 33,99 € </p>
+                <a class="btn" style="background-color: black; color: azure;" href="#">ajouter au panier</a>
+                <button>29,09€</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Gym Shop. All rights reserved.</p>
+    </footer>
+
+    
+</body>
+</html>

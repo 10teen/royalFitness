@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROYAL Fitness</title>
+    <link rel="icon" href="gymbro.jpg">
+    <style>
+        /* General styles */
+        *.hero
+         {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            text-transform: capitalize;
+            transition: 0.2s linear;
+            background-color: var(--primary-color);
+            --primary-color: #111317;
+        
+        }
+
+
+        h1, h2, h3 {
+            margin: 0;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #262628;
+            color: #fff;
+        }
+        .nav__logo h3 {
+            font-size: 50px;
+            font-weight: 800;
+            color: #fff;
+              
+        }
+        .nav__logo span{
+             color: rgb(83, 235, 96);
+        }
+
+         .navbar {
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar button {
+            background: #36bfeb;
+            color: #f1f1f4;
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .navbar .btn {
+            background: #fff;
+            color: #36bfe9;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+
+        /* Button Hover Effect */
+        .btn:hover, .hero button:hover, .navbar button:hover {
+            background-color:  #31de1a;
+        }
+
+        /* Hero Section */
+        .hero {
+            
+            padding: 40px 0;
+            background-color: #111317;
+            color: #faf9f9fe;
+        }
+
+        .hero h1 {
+            margin-top: 70px;
+            font-size: 3em;
+            margin-bottom: 20px;
+           
+        
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            background-color: #509ac8;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+       
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar button {
+                margin-bottom: 10px;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+        }
+       
+.chest-exercice{
+
+ display: grid;
+grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+align-items:center ;
+gap: 2.3rem;
+margin-top: 4.1rem;
+
+}
+.heading span{
+    color: beige;
+}
+.heading{
+
+font-size: 100px;
+color: #26b62f;
+}
+.rowchest{
+
+background: var(--bg-color);
+border-radius: 27px;
+box-shadow: 0 0 5px var(--main-color);
+padding: 10px;
+border: 1px solid transparent;
+transition:  all  0.5s ease;
+}
+
+.rowchest video{
+height: auto;
+width: 100%;
+border-radius: 27px;
+margin-bottom: 27px;
+}
+
+
+.back-exercice{
+
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+align-items:center ;
+gap: 2.3rem;
+margin-top: 4.1rem;
+
+}
+.rowbck{
+
+background: var(--bg-color);
+border-radius: 27px;
+box-shadow: 0 0 5px var(--main-color);
+padding: 10px;
+border: 1px solid transparent;
+transition:  all  0.5s ease;
+}
+
+.rowbck video{
+height: auto;
+width: 100%;
+border-radius: 27px;
+margin-bottom: 27px;
+}
+
+.leg-exercice{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+align-items:center ;
+gap: 2.3rem;
+margin-top: 4.1rem;
+
+
+}
+.rowleg{
+
+background: var(--bg-color);
+border-radius: 27px;
+box-shadow: 0 0 5px var(--main-color);
+padding: 10px;
+border: 1px solid transparent;
+transition:  all  0.5s ease;
+}
+
+.rowleg video{
+height: auto;
+width: 100%;
+border-radius: 27px;
+margin-bottom: 27px;
+}
+
+.chestbackleg h2{
+    font-size: 70px;
+
+}
+ img{
+    float:right
+}
+
+img {
+  width: 600px;
+  height: 480px;
+}
+.footer {
+  background-color: var(--primary-color-light);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  color: #20e319;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.footer-logo h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+.footer-logo h2 span {
+  color: #ffffff;
+}
+
+.footer-logo img{
+  border-radius: 800px;
+
+}
+
+.footer-info p,
+.footer-contact p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-icons img {
+  width: 35px;
+  height: 35px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+  opacity: 1;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  margin-top: 15px;
+  opacity: 0.7;
+}
+.list {
+    display: flex;
+    gap: 20px;
+}
+.list li {
+    list-style: none;
+}
+.list a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+.list a:hover {
+    color: #408f58;
+    transform: scale(1.1);
+}
+
+
+
+
+    </style>
+</head>
+<body class="body" >
+    <header class="header">
+        <div class="nav__logo">
+            <h3><span>Royal</span>Fitness</h3>
+        </div>
+        <nav class="navbar">
+            <ul class="list">
+              <li><a href="#Home" target="_parent">Home</a></li>
+              <li><a href="#Home" target="_parent">Sevices</a></li>
+              <li><a href="lamrharigym.html" target="_blank">Shopping</a></li>
+              <li><a href="#Home" target="_parent" class="btn btn-primary">Join Us</a></li>
+              <a href="NN.HTML" target="_blank">A propos</a>
+            </ul>
+
+            
+        </nav>
+    </header>
+    <section style="margin-bottom: 50px;">
+        <div class="hero">
+            <img src="img1.jpg" alt="img" style="border-radius: 30px;">
+            <h1>Help For Ideal Body Fitness</h1>
+            <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Ellt. Dicta, Numquam, Sequi
+            Assumenda Nam, Vel Nihil Repudiandae Omnis Evaniet Est Drcepturi Atque Molestios
+            At Dolores Fugit! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis doloribus perspiciatis facere magnam similique odio, molestiae ipsam, est adipisci cumque sequi soluta? Non maxime dolor omnis nobis accusamus ad perferendis.</p>
+            <button>Learn More</button>
+        
+        </div>
+    </section>
+    <section  class="chestbackleg">
+        <h2 class="heading">  Exercice <span>chest  :</span></h2>
+      <div class="chest-exercice">
+          <div class="rowchest">
+            <video  src="chest1.mp4"  controls></video>
+          </div> 
+          
+          <div class="rowchest">
+              <video  src="chest2.mp4"  controls></video>
+            </div>
+
+            <div class="rowchest">
+              <video  src="chest3.mp4"  controls></video>
+            </div>
+      </div>
+
+      <h2 class="heading">  Exercice <span>back  :</span></h2>
+
+      <div class="back-exercice">
+          <div class="rowbck">
+            <video  src="back1.mp4"  controls></video>
+          </div> 
+          
+          <div class="rowbck">
+              <video  src="back2.mp4"  controls></video>
+            </div>
+
+            <div class="rowbck">
+              <video  src="bacK3.mp4"  controls></video>
+            </div>
+      </div>
+
+      <h2 class="heading">  Exercice <span>legs :</span></h2>
+
+      <div class="leg-exercice">
+          <div class="rowleg">
+            <video  src="leg1.mp4"  controls></video>
+          </div> 
+          
+          <div class="rowleg">
+              <video  src="leg2.mp4"  controls></video>
+            </div>
+
+            <div class="rowleg">
+              <video  src="leg3.mp4"  controls></video>
+            </div>
+      </div>
+      
+      <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <h2>ROYAL<span>FITNESS</span></h2>
+            <img src="images (14).jpeg" alt="">
+        </div>
+
+        <div class="footer-info">
+          <p>Suivez-nous sur les réseaux sociaux</p>
+           
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="pp.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="rss-48.png" alt="Instagram">
+                </a>
+                <a href="https://t.me/" target="_blank">
+                    <img src="twitter-50.png" alt="Telegram">
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <img src="linkedin-50.png" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-contact">
+          <p>📞 Numéro de téléphone : +212 600 123 456</p>
+        </div>
+    </div>
+
+    <p class="footer-copy">© 2025 Tous droits réservés -royalFITNESS</p>
+</footer>
+  </section>
+  
+</body>
+</html>
